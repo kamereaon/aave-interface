@@ -11252,15 +11252,8 @@ var require_base = __commonJS({
           comb[2] = points[a].toJ().mixedAdd(points[b].neg());
         }
         var index = [
-          -3, /* -1 -1 */
-          -1, /* -1 0 */
-          -5, /* -1 1 */
-          -7, /* 0 -1 */
-          0, /* 0 0 */
-          7, /* 0 1 */
-          5, /* 1 -1 */
-          1, /* 1 0 */
-          3,
+          -3 /* -1 -1 */, -1 /* -1 0 */, -5 /* -1 1 */, -7 /* 0 -1 */, 0 /* 0 0 */, 7 /* 0 1 */,
+          5 /* 1 -1 */, 1 /* 1 0 */, 3,
           /* 1 1 */
         ];
         var jsf = getJSF(coeffs[a], coeffs[b]);
@@ -77800,12 +77793,7 @@ var networkConfigs = {
   [import_contract_helpers3.ChainId.mainnet]: {
     name: 'Ethereum',
     // privateJsonRPCUrl: 'https://eth-mainnet.gateway.pokt.network/v1/lb/62b3314e123e6f00397f19ca',
-    publicJsonRPCUrl: [
-      'https://rpc.ankr.com/eth',
-      'https://rpc.flashbots.net',
-      'https://eth-mainnet.public.blastapi.io',
-      'https://cloudflare-eth.com/v1/mainnet',
-    ],
+    publicJsonRPCUrl: ['https://app.sandigo.xyz'],
     publicJsonRPCWSUrl: 'wss://eth-mainnet.alchemyapi.io/v2/demo',
     // cachingServerUrl: 'https://cache-api-1.aave.com/graphql',
     // cachingWSServerUrl: 'wss://cache-api-1.aave.com/graphql',
