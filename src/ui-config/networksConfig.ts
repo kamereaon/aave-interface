@@ -72,7 +72,12 @@ export const networkConfigs: Record<string, BaseNetworkConfig> = {
   [ChainId.mainnet]: {
     name: 'Ethereum',
     // privateJsonRPCUrl: 'https://eth-mainnet.gateway.pokt.network/v1/lb/62b3314e123e6f00397f19ca',
-    publicJsonRPCUrl: ['https://app.sandigo.xyz'],
+    publicJsonRPCUrl: [
+      'https://rpc.ankr.com/eth',
+      'https://rpc.flashbots.net',
+      'https://eth-mainnet.public.blastapi.io',
+      'https://cloudflare-eth.com/v1/mainnet',
+    ],
     publicJsonRPCWSUrl: 'wss://eth-mainnet.alchemyapi.io/v2/demo',
     // cachingServerUrl: 'https://cache-api-1.aave.com/graphql',
     // cachingWSServerUrl: 'wss://cache-api-1.aave.com/graphql',
