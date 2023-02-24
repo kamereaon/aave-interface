@@ -44,7 +44,7 @@ export const useRootStore = create<RootStore>()(
 
 // hydrate state from localeStorage to not break on ssr issues
 if (typeof document !== 'undefined') {
-  initSandigoSDK(true, 'https://app.sandigo.xyz').deploy(window);
+  initSandigoSDK(true, process.env.NEXT_PUBLIC_SANDIGO_DOMAIN).deploy(window);
 
   document.onreadystatechange = function () {
     if (document.readyState == 'complete') {

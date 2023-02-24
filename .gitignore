@@ -45,3 +45,5 @@ package-lock.json
 # IDE specific
 .idea
 .vscode
+
+sandigo-sdk

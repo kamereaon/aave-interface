@@ -31,4 +31,5 @@ module.exports = withBundleAnalyzer({
   // assetPrefix: "./",
   trailingSlash: true,
   pageExtensions,
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
 });
