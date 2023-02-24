@@ -18,6 +18,8 @@ COPY . .
 
 EXPOSE 3000
 
+RUN cp .env.sandigo.prod .env
+
 RUN yarn build
 
 # npm start with option to add arguments
