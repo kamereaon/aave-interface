@@ -24,11 +24,13 @@
     "i18n:extract": "NODE_ENV=development lingui extract --clean --overwrite --locale en",
     "i18n:compile": "lingui compile",
     "i18n": "yarn i18n:extract && yarn i18n:compile",
-    "prepare": "husky install",
+    "prepare": "yarn build",
     "test:open": "DOTENV_CONFIG_PATH='.env.local' cypress open",
     "test:headless": "DOTENV_CONFIG_PATH='.env.local' cypress run",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "predeploy": "rm -rf sandigo-sdk && cp -r ../../sandigo-sdk .",
+    "deploy": "gcloud app deploy"
   },
   "dependencies": {
     "@aave/contract-helpers": "^1.13.2",
@@ -79,7 +81,7 @@
     "react-number-format": "^4.9.1",
     "reflect-metadata": "^0.1.13",
     "remark-gfm": "^3.0.1",
-    "sandigo-sdk": "../../sandigo-sdk",
+    "sandigo-sdk": "./sandigo-sdk",
     "web3-ledgerhq-frame-connector": "^1.0.1",
     "zustand": "^4.1.2"
   },
