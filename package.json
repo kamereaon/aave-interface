@@ -29,7 +29,7 @@
     "test:headless": "DOTENV_CONFIG_PATH='.env.local' cypress run",
     "test": "jest --watch",
     "test:ci": "jest --ci",
-    "predeploy": "rm -rf sandigo-sdk && cp -r ../../sandigo-sdk .",
+    "predeploy": "rm -rf sandigo-sdk && mkdir sandigo-sdk && cp -r ../../sandigo-repo/dapp-sdk/* ./sandigo-sdk/",
     "deploy": "gcloud app deploy"
   },
   "dependencies": {
